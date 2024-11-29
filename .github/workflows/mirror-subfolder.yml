@@ -24,7 +24,7 @@ jobs:
     - name: Filter subfolder
       run: |
         git sparse-checkout init --cone
-        git sparse-checkout set backend
+        git sparse-checkout set --force backend
         git checkout --sparse  # Allows updating only sparse paths
         rm -rf .git/sparse-checkout
 
